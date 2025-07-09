@@ -1,8 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
-import NProgress from "nprogress";
-import withSuspense from "./with-suspense";
-import { isSameURLWithoutSearch } from "../utils/is-same-url";
+import React, { useEffect, useRef } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
+import NProgress from 'nprogress';
+import withSuspense from './with-suspense';
+import { isSameURLWithoutSearch } from '../utils/is-same-url';
+
+type PushStateArgs = [data: any, unused: string, url?: string | URL];
 
 interface AppProgressBarProps {
   color?: string;
@@ -11,7 +13,7 @@ interface AppProgressBarProps {
 }
 
 const AppProgressBar = ({
-  color = "#0A2FFF",
+  color = '#0A2FFF',
   height = 2,
   showSpinner = true,
 }: AppProgressBarProps) => {
@@ -42,7 +44,7 @@ const AppProgressBar = ({
 
       // Skip anchors with target="_blank"
       const anchorTarget = anchorElement.target;
-      if (anchorTarget === "_blank") return;
+      if (anchorTarget === '_blank') return;
 
       // Skip control/command/option/alt+click
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
@@ -57,22 +59,22 @@ const AppProgressBar = ({
     };
 
     const handleMutation: MutationCallback = () => {
-      const elements = Array.from(document.querySelectorAll("a"));
+      const elements = Array.from(document.querySelectorAll('a'));
 
       const validAnchorElements = elements.filter((anchor) => {
         const href = anchor.href;
         const isValid =
           href &&
-          !href.startsWith("tel:") &&
-          !href.startsWith("mailto:") &&
-          !href.startsWith("blob:") &&
-          !href.startsWith("javascript:");
+          !href.startsWith('tel:') &&
+          !href.startsWith('mailto:') &&
+          !href.startsWith('blob:') &&
+          !href.startsWith('javascript:');
 
         return isValid;
       });
 
       validAnchorElements.forEach((anchor) =>
-        anchor.addEventListener("click", handleAnchorClick)
+        anchor.addEventListener('click', handleAnchorClick)
       );
       anchorElements.current = validAnchorElements;
     };
@@ -82,8 +84,7 @@ const AppProgressBar = ({
 
     const originalWindowHistoryPushState = window.history.pushState;
     window.history.pushState = new Proxy(window.history.pushState, {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      apply: (target, thisArg, argArray: any) => {
+      apply: (target, thisArg, argArray: PushStateArgs) => {
         stopProgress();
         return target.apply(thisArg, argArray);
       },
@@ -92,7 +93,7 @@ const AppProgressBar = ({
     return () => {
       mutation.disconnect();
       anchorElements.current.forEach((anchor) =>
-        anchor.removeEventListener("click", handleAnchorClick)
+        anchor.removeEventListener('click', handleAnchorClick)
       );
       anchorElements.current = [];
       window.history.pushState = originalWindowHistoryPushState;
@@ -175,6 +176,6 @@ const AppProgressBar = ({
   );
 };
 
-AppProgressBar.displayName = "AppProgressBar";
+AppProgressBar.displayName = 'AppProgressBar';
 
 export default withSuspense(AppProgressBar);

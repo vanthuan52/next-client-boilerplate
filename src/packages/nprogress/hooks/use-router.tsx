@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { Locale } from 'next-intl';
 import { NavigateOptions } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 import NProgress from 'nprogress';
@@ -23,7 +23,10 @@ export default function useRouter() {
       progress(href);
       router.push(href, options);
     },
-    replace: (href: string, options?: NavigateOptions & { locale?: Locale }) => {
+    replace: (
+      href: string,
+      options?: NavigateOptions & { locale?: Locale }
+    ) => {
       progress(href);
       router.replace(href, options);
     },
