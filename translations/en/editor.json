@@ -1,0 +1,16 @@
+{
+  "toolbar": {
+    "bold": "Bold",
+    "italic": "Italic",
+    "underline": "Underline",
+    "link": "Insert Link",
+    "image": "Insert Image",
+    "code": "Code Block"
+  },
+  "placeholder": "Start writing your story...",
+  "actions": {
+    "save": "Save",
+    "publish": "Publish",
+    "draft": "Save as Draft"
+  }
+}

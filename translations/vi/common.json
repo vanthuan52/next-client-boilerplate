@@ -1,0 +1,17 @@
+{
+  "welcome": "Chào mừng đến với NextJs Client Boilerplate",
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "blog": "Blog"
+  },
+  "searchBox": {
+    "placeholders": [
+      "Tìm bài viết",
+      "Khám phá kiến thức công nghệ",
+      "Tìm chủ đề bạn quan tâm",
+      "Viết và chia sẻ bài viết của bạn"
+    ],
+    "button": "Tìm kiếm"
+  }
+}

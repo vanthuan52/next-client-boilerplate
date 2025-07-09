@@ -1,0 +1,68 @@
+:root,
+[data-theme*='light'] {
+  color-scheme: light !important;
+
+  --radius: 0.625rem;
+
+  --background: #fff;
+  --foreground: oklch(15% 0 0);
+  --primary: oklch(56% 0.217 274);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(92% 0.006 260);
+  --secondary-foreground: oklch(25% 0 0);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(37% 0.03 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(35% 0 0);
+
+  --muted: oklch(96% 0.001 0);
+  --muted-foreground: oklch(55% 0 0);
+  --accent: oklch(92.813% 0.00694 88.614);
+  --accent-foreground: oklch(20% 0.03 260);
+  --destructive: oklch(65% 0.175 29);
+
+  --border: oklch(85% 0.008 260);
+  --input: oklch(1 0 0);
+  --input-foreground: oklch(20% 0.01 260);
+  --ring: oklch(56% 0.217 274);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.06);
+  --shadow-floating: 0 0 0 1px rgba(209, 217, 224, 0.5),
+    0 6px 12px -3px rgba(0, 0, 0, 0.08), 0 6px 18px 0px rgba(0, 0, 0, 0.08);
+
+  /* Muted */
+  --muted: #e9e4e1;
+  --muted-foreground: #5a5350;
+}
+
+.dark,
+[data-theme*='dark'] {
+  color-scheme: dark !important;
+
+  --background: oklch(22% 0.016 285);
+  --foreground: oklch(98% 0 0);
+  --primary: oklch(58% 0.208 276);
+  --primary-foreground: oklch(97% 0.01 248.179);
+  --secondary: oklch(32% 0.014 285);
+  --secondary-foreground: oklch(90% 0 0);
+
+  --popover: oklch(27% 0.02 285);
+  --popover-foreground: oklch(90% 0 0);
+  --card: oklch(25% 0.018 285);
+  --card-foreground: oklch(90% 0 0);
+
+  --muted: oklch(28% 0.008 285);
+  --muted-foreground: oklch(68% 0.004 285);
+  --accent: oklch(35% 0.028 285);
+  --accent-foreground: oklch(98% 0 0);
+  --destructive: oklch(63.575% 0.20881 25.397);
+
+  --border: oklch(35% 0.015 285);
+  --input: oklch(30% 0.01 285);
+  --input-foreground: oklch(94% 0.005 285);
+  --ring: oklch(58% 0.208 276);
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-floating: 0 0 0 1px rgba(255, 255, 255, 0.2),
+    0px 6px 12px -3px rgba(1, 4, 9, 0.4), 0px 6px 18px 0px rgba(1, 4, 9, 0.4);
+}

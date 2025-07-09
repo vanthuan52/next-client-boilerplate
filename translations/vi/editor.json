@@ -1,0 +1,16 @@
+{
+  "toolbar": {
+    "bold": "In đậm",
+    "italic": "In nghiêng",
+    "underline": "Gạch chân",
+    "link": "Chèn liên kết",
+    "image": "Chèn ảnh",
+    "code": "Khối mã"
+  },
+  "placeholder": "Bắt đầu viết bài của bạn...",
+  "actions": {
+    "save": "Lưu",
+    "publish": "Xuất bản",
+    "draft": "Lưu bản nháp"
+  }
+}

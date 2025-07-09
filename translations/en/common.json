@@ -1,0 +1,17 @@
+{
+  "welcome": "Welcome to NextJS Client Boilerplate",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog"
+  },
+  "searchBox": {
+    "placeholders": [
+      "Search programming posts",
+      "Explore tech insights",
+      "Find topics you care about",
+      "Write and share your articles"
+    ],
+    "button": "Search"
+  }
+}
